@@ -12,7 +12,10 @@ class TestZoo(unittest.TestCase):
 
     def test_baby_ticket_price(self):
         self.assertEqual(self.zoo.get_ticket_price(-1), 0)
-    
+
+    def test_boys_girls_ticket_price(self):
+        self.assertEqual(self.zoo.get_ticket_price(5), 50)
+
     def test_young_ticket_price(self):
         self.assertEqual(self.zoo.get_ticket_price(15), 100)
 
@@ -20,7 +23,7 @@ class TestZoo(unittest.TestCase):
         self.assertEqual(self.zoo.get_ticket_price(25), 150)
 
     def test_old_ticket_price(self):
-        self.assertEqual(self.zoo.get_ticket_price(79), 100)
+        self.assertEqual(self.zoo.get_ticket_price(195), 100)
     
 if __name__ == '__main__':
     unittest.main()
